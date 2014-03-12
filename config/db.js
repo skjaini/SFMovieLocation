@@ -3,13 +3,18 @@
  * REST endpoints and mongodb setup
  */
 
-var MongoClient = require('mongodb').MongoClient,
-    Server = require('mongodb').Server,
-    db;
+var mongo = require("mongodb");
 
-var mongoClient = new MongoClient(new Server('localhost', 27017));
-mongoClient.open(function(err, mongoClient) {
-    db = mongoClient.db("moviesdb1");
+var mongoUri = process.env.MONGOLAB_URI ||
+               process.env.MONGOHQ_URL ||
+                'mongodb://localhost/moviesdb1',
+    db,
+    movie;
+
+mongo.MongoClient.connect(mongoUri, function(err, database){
+    if (err) throw err;
+    db = database;
+
     db.collection('movies', {strict:true}, function(err, collection) {
         if (err) {
             console.log("The 'movies' collection doesn't exist. Creating it with sample data...");

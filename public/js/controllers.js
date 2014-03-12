@@ -15,7 +15,7 @@ angular.module('film.controllers', []).
     $scope.myMarkers = [];
 
     // Fetch the list of movie titles
-	$http.get('http://localhost\:3000/movienames').then(function(res){
+	$http.get('/movienames').then(function(res){
 		// console.log(res.data);
 		 $scope.movies = res.data;
 	});
@@ -52,7 +52,7 @@ angular.module('film.controllers', []).
 			$scope.clearOverlays();
 
     		// Fetch the location the movie was shot
-			$http.get('http://localhost\:3000/movies/'+$scope.movieName).then(function(res){
+			$http.get('/movies/'+$scope.movieName).then(function(res){
 				var queryResults = res.data;
 
 				// Loop through the list of locations
