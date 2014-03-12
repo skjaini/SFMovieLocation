@@ -1,4 +1,4 @@
-# SF Movies Web Application
+# SF Movie Location Web Application
 
 ## Overview
 
@@ -12,14 +12,15 @@ Locations](https://data.sfgov.org/Arts-Culture-and-Recreation-/Film-Locations-in
 * [AngularJS](http://angularjs.org) - Impressive client-side framework providing MVVM pattern, Dependency Injection, 2-way data binding, Templating to name a few that I attempted 
   to incorporate into this SPA (Single-Page Application) in just couple of days of exposure to the framework.
 * [Twitter's Bootstrap](http://getbootstrap.com/) - For bootstraping the web page styles.
+* [MongoDB] (http://mongodb.com) - Backend with RESTful services using node.js
 
 
 ### Running the app 
 
-One of these options can be used:
-
-* serve this repository with your webserver
-* install node.js and run `node scripts/web-server.js`
+* Download the repository
+* Install npm modules: `npm install`
+* Start mongod deamon
+* Run `node server.js`
 
 
 ## Directory Layout
@@ -44,11 +45,6 @@ One of these options can be used:
 
 ## Live Demo
 
-Now for the exciting part.. demo of the app deployed to Heroku:
-
-
-## Screenshots
-
-![SF Movie Location - Screenshot 1](https://raw.github.com/skjaini/SFMovieLocation/master/public/img/SF_Movie_Location_1.png)
-![SF Movie Location - Screenshot 2](https://raw.github.com/skjaini/SFMovieLocation/master/public/img/SF_Movie_Location_2.png)
-
+Demo of the app deployed to Heroku:
+ 
+ http://whispering-earth-9115.herokuapp.com
