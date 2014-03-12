@@ -1,0 +1,13 @@
+/* app css stylesheet */
+
+root { 
+    display: block;
+}
+
+div#map_canvas {
+    height:650px;
+    width:100%;
+    border:2px solid #777777;
+    margin:3px;
+    border:1px solid
+}

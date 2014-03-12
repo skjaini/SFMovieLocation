@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Film Location in San Francisco</title>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
+
+		<!-- Load the static js files from CDN -->
+		<script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.js"></script>
+		<script type='text/javascript' src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
+		<script type='text/javascript' src="http://www.flocations.com/static/vendor/angular-ui/map/ui-map.min.js"></script>
+		<script type='text/javascript' src="http://www.flocations.com/static/vendor/angular-ui/event/event.js"></script>
+
+		<script type='text/javascript' src="js/app.js"></script>
+		<script type='text/javascript' src="js/services.js"></script>
+		<script type='text/javascript' src="js/controllers.js"></script>
+
+    </head>
+    <body ng-app="film">
+		<!-- Inject the view template for current route into this layout template -->
+		<div ng-view></div>
+    </body>
+</html>
