@@ -18,6 +18,7 @@ angular.module('film.controllers', []).
 	$http.get('/movienames').then(function(res){
 		// console.log(res.data);
 		 $scope.movies = res.data;
+		 $scope.findLocations();
 	});
     
     // Set the map view to San Francisco
@@ -50,6 +51,10 @@ angular.module('film.controllers', []).
 
 			// Reset the map
 			$scope.clearOverlays();
+
+			if( typeof $scope.movieName === 'undefined') {
+				return false;
+			}
 
     		// Fetch the location the movie was shot
 			$http.get('/movies/'+$scope.movieName).then(function(res){
